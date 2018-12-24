@@ -1,0 +1,26 @@
+package com.enmCommonUse7;
+/**
+ * 用法二：switch
+ * JDK1.6之前的switch语句只支持int,char,enum类型，使用枚举，能让我们的代码可读性更强。 
+ * @author WBB
+ *
+ */
+enum Signal {  
+    GREEN, YELLOW, RED  
+}  
+public class TrafficLight {
+	Signal color = Signal.RED;
+	public void chengr() {
+		switch(color) {
+			case RED:
+				color = Signal.GREEN;
+				break;
+			case YELLOW:
+				color = Signal.RED;
+				break;
+			case GREEN:
+				color = Signal.YELLOW;
+				break;
+		}
+	}
+}
